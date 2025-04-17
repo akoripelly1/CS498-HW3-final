@@ -1,0 +1,19 @@
+2025-04-17 19:30:31,545 DEBUG    root            Loaded Command Group: ['gcloud', 'services']
+2025-04-17 19:30:31,586 DEBUG    root            Loaded Command Group: ['gcloud', 'services', 'enable']
+2025-04-17 19:30:31,588 DEBUG    root            Running [gcloud.services.enable] with arguments: [SERVICE:1: "['bigtable.googleapis.com']"]
+2025-04-17 19:30:31,742 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/26433665669-compute@developer.gserviceaccount.com/?recursive=true
+2025-04-17 19:30:31,746 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2025-04-17 19:30:31,748 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/26433665669-compute@developer.gserviceaccount.com/?recursive=true HTTP/11" 200 140
+2025-04-17 19:30:31,750 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/26433665669-compute@developer.gserviceaccount.com/token
+2025-04-17 19:30:31,766 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/26433665669-compute@developer.gserviceaccount.com/token HTTP/11" 200 866
+2025-04-17 19:30:31,797 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2025-04-17 19:30:32,018 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "POST /v1/projects/iron-pottery-457119-n1/services/bigtable.googleapis.com:enable?alt=json HTTP/11" 200 None
+2025-04-17 19:30:32,035 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2025-04-17 19:30:32,109 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acat.p2-26433665669-bd4eca9c-40fc-402d-bf5a-67a36feaf47c?alt=json HTTP/11" 200 None
+2025-04-17 19:30:34,624 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2025-04-17 19:30:34,682 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acat.p2-26433665669-bd4eca9c-40fc-402d-bf5a-67a36feaf47c?alt=json HTTP/11" 200 None
+2025-04-17 19:30:34,684 INFO     ___FILE_ONLY___ Operation "operations/acat.p2-26433665669-bd4eca9c-40fc-402d-bf5a-67a36feaf47c" finished successfully.
+
+2025-04-17 19:30:34,685 DEBUG    root            Chosen display Format:none
+2025-04-17 19:30:34,685 INFO     root            Display format: "none"
+2025-04-17 19:30:34,686 DEBUG    root            SDK update checks are disabled.

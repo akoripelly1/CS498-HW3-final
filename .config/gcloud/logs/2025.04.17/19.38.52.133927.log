@@ -1,0 +1,42 @@
+2025-04-17 19:38:52,250 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2025-04-17 19:38:52,393 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'scp']
+2025-04-17 19:38:52,404 DEBUG    root            Running [gcloud.compute.scp] with arguments: [--zone: "us-central1-b", [[USER@]INSTANCE:]DEST: "ashika_koripelly@instance-20250417-192334:~", [[USER@]INSTANCE:]SRC:1: "['Electric_Vehicle_Population_Data.csv']"]
+2025-04-17 19:38:52,405 WARNING  root            The private SSH key file for gcloud does not exist.
+2025-04-17 19:38:52,405 WARNING  root            The public SSH key file for gcloud does not exist.
+2025-04-17 19:38:52,405 WARNING  root            You do not have an SSH key for gcloud.
+2025-04-17 19:38:52,405 WARNING  root            SSH keygen will be executed to generate a key.
+2025-04-17 19:38:52,406 DEBUG    root            Running command [/usr/bin/ssh-keygen -t rsa -f /home/ashika_koripelly/.ssh/google_compute_engine].
+2025-04-17 19:38:52,406 DEBUG    root            Executing command: ['/usr/bin/ssh-keygen', '-t', 'rsa', '-f', '/home/ashika_koripelly/.ssh/google_compute_engine']
+2025-04-17 19:39:51,760 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2025-04-17 19:39:51,870 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/iron-pottery-457119-n1/zones/us-central1-b/instances/instance-20250417-192334?alt=json HTTP/11" 404 None
+2025-04-17 19:39:51,876 DEBUG    root            Chosen display Format:list[title="Could not fetch resource:",always-display-title]
+2025-04-17 19:39:51,876 DEBUG    root            (gcloud.compute.scp) Could not fetch resource:
+ - The resource 'projects/iron-pottery-457119-n1/zones/us-central1-b/instances/instance-20250417-192334' was not found
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 981, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 934, in Run
+    resources = command_instance.Run(args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/compute/scp.py", line 188, in Run
+    return scp_helper.RunScp(
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/scp_utils.py", line 137, in RunScp
+    instance = self.GetInstance(compute_client, instance_ref)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/ssh_utils.py", line 533, in GetInstance
+    return client.MakeRequests([request])[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 145, in MakeRequests
+    utils.RaiseToolException(
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 139, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 148, in RaiseException
+    raise exception(
+googlecloudsdk.calliope.exceptions.ToolException: Could not fetch resource:
+ - The resource 'projects/iron-pottery-457119-n1/zones/us-central1-b/instances/instance-20250417-192334' was not found
+
+2025-04-17 19:39:51,896 ERROR    root            (gcloud.compute.scp) Could not fetch resource:
+ - The resource 'projects/iron-pottery-457119-n1/zones/us-central1-b/instances/instance-20250417-192334' was not found
+

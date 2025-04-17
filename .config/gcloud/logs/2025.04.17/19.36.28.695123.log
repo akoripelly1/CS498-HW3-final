@@ -1,0 +1,10 @@
+2025-04-17 19:36:28,698 DEBUG    root            Loaded Command Group: ['gcloud', 'bigtable', 'tables']
+2025-04-17 19:36:28,790 DEBUG    root            Loaded Command Group: ['gcloud', 'bigtable', 'tables', 'create']
+2025-04-17 19:36:28,826 DEBUG    root            Running [gcloud.bigtable.tables.create] with arguments: [--column-families: "['ev_info']", --instance: "ev-bigtable", TABLE: "ev-population"]
+2025-04-17 19:36:28,910 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): bigtableadmin.googleapis.com:443
+2025-04-17 19:36:31,939 DEBUG    urllib3.connectionpool https://bigtableadmin.googleapis.com:443 "POST /v2/projects/iron-pottery-457119-n1/instances/ev-bigtable/tables?alt=json HTTP/11" 200 None
+2025-04-17 19:36:31,941 INFO     ___FILE_ONLY___ Created table [ev-population].
+
+2025-04-17 19:36:31,941 DEBUG    root            Chosen display Format:none
+2025-04-17 19:36:31,942 INFO     root            Display format: "none"
+2025-04-17 19:36:31,962 DEBUG    root            SDK update checks are disabled.

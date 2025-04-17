@@ -1,0 +1,30 @@
+2025-04-17 19:33:19,109 DEBUG    root            Loaded Command Group: ['gcloud', 'bigtable', 'instances']
+2025-04-17 19:33:19,138 DEBUG    root            Loaded Command Group: ['gcloud', 'bigtable', 'instances', 'create']
+2025-04-17 19:33:19,197 WARNING  root            The --cluster argument is deprecated; use --cluster-config instead.
+2025-04-17 19:33:19,197 WARNING  root            The --cluster-zone argument is deprecated; use --cluster-config instead.
+2025-04-17 19:33:19,197 WARNING  root            The --instance-type argument is deprecated. DEVELOPMENT instances are no longer offered. All instances are of type PRODUCTION.
+2025-04-17 19:33:19,203 DEBUG    root            Running [gcloud.bigtable.instances.create] with arguments: [--cluster: "ev-cluster", --cluster-zone: "us-central1-b", --display-name: "EV Bigtable Instance", --instance-type: "DEVELOPMENT", INSTANCE: "ev-bigtable"]
+2025-04-17 19:33:19,270 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): bigtableadmin.googleapis.com:443
+2025-04-17 19:33:19,308 DEBUG    urllib3.connectionpool https://bigtableadmin.googleapis.com:443 "POST /v2/projects/iron-pottery-457119-n1/instances?alt=json HTTP/11" 403 None
+2025-04-17 19:33:22,880 INFO     ___FILE_ONLY___ Enabling service [bigtableadmin.googleapis.com] on project [26433665669]...
+
+2025-04-17 19:33:22,913 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2025-04-17 19:33:23,115 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "POST /v1/projects/26433665669/services/bigtableadmin.googleapis.com:enable?alt=json HTTP/11" 200 None
+2025-04-17 19:33:23,132 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2025-04-17 19:33:23,188 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acat.p2-26433665669-f5c8440a-1d59-47ef-888e-d8e5f4cb74a2?alt=json HTTP/11" 200 None
+2025-04-17 19:33:26,047 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2025-04-17 19:33:26,107 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/operations/acat.p2-26433665669-f5c8440a-1d59-47ef-888e-d8e5f4cb74a2?alt=json HTTP/11" 200 None
+2025-04-17 19:33:26,110 INFO     ___FILE_ONLY___ Operation "operations/acat.p2-26433665669-f5c8440a-1d59-47ef-888e-d8e5f4cb74a2" finished successfully.
+
+2025-04-17 19:33:26,110 DEBUG    root            Request returned no response, retrying
+2025-04-17 19:33:26,111 DEBUG    root            Retrying request to url https://bigtableadmin.googleapis.com/v2/projects/iron-pottery-457119-n1/instances?alt=json after exception Retry
+2025-04-17 19:33:28,425 DEBUG    urllib3.connectionpool https://bigtableadmin.googleapis.com:443 "POST /v2/projects/iron-pottery-457119-n1/instances?alt=json HTTP/11" 200 None
+2025-04-17 19:33:28,490 INFO     ___FILE_ONLY___ Creating bigtable instance ev-bigtable...
+2025-04-17 19:33:29,495 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): bigtableadmin.googleapis.com:443
+2025-04-17 19:33:29,562 DEBUG    urllib3.connectionpool https://bigtableadmin.googleapis.com:443 "GET /v2/operations/projects/iron-pottery-457119-n1/instances/ev-bigtable/locations/us-central1-b/operations/702974644812252658?alt=json HTTP/11" 200 None
+2025-04-17 19:33:31,941 DEBUG    urllib3.connectionpool https://bigtableadmin.googleapis.com:443 "GET /v2/operations/projects/iron-pottery-457119-n1/instances/ev-bigtable/locations/us-central1-b/operations/702974644812252658?alt=json HTTP/11" 200 None
+2025-04-17 19:33:32,103 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): bigtableadmin.googleapis.com:443
+2025-04-17 19:33:32,447 DEBUG    urllib3.connectionpool https://bigtableadmin.googleapis.com:443 "GET /v2/projects/iron-pottery-457119-n1/instances/ev-bigtable?alt=json HTTP/11" 200 None
+2025-04-17 19:33:32,449 DEBUG    root            Chosen display Format:none
+2025-04-17 19:33:32,449 INFO     root            Display format: "none"
+2025-04-17 19:33:32,527 DEBUG    root            SDK update checks are disabled.
